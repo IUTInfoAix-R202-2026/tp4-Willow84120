@@ -33,7 +33,7 @@ public class MessageViewModel {
     this.message = message;
 
     texte.set(message.getTexte());
-    texte.addListener((obs, ancien, nouveau) -> this.message.setTexte(nouveau));
+    texte.addListener((obs, ancien, nouveau) -> message.setTexte(nouveau));
     apercu.bind(Bindings.concat("Aperçu : ", texte));
   }
 
